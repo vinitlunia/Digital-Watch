@@ -33,9 +33,9 @@
 
         .main-child {
             width: 100%;
-            display: flex;
+            /* display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: center; */
         }
 
         .main-child>div img {
@@ -51,7 +51,6 @@
 
         .main-child img {
             max-width: 100%;
-            /* height: auto; */
 
         }
 
@@ -60,9 +59,7 @@
             height: 290px;
 
             position: absolute;
-            /* top: 150px; */
             right: 140px;
-            /* border: 10px solid black; */
             border-radius: 40px;
             background-repeat: no-repeat;
             background-size: cover;
@@ -118,19 +115,21 @@
             background-size: 30px;
         }
 
-        /* Large screen (desktops) */
         @media (min-width: 1200px) {
+            .main-child img {
+            max-width: fit-content;
+
+        }
             .main-child>div img {
                 width: 280px;
                 height: 275px;
                 left: 120px;
-                top: 145px;
+                top: 340px;
             }
 
             #img {
                 width: 280px;
                 height: 275px;
-                /* right: 170px; */
                 top: 145px;
             }
 
@@ -140,8 +139,12 @@
             }
         }
 
-        /* Medium screen (tablets) */
         @media (max-width: 1199px) and (min-width: 790px) {
+
+            .main-child img {
+            max-width: fit-content;
+
+        }
             .main-child>div img {
                 width: 280px;
                 height: 280px;
@@ -167,7 +170,6 @@
             }
         }
 
-        /* Small screen (phones) */
         @media (max-width: 789px) {
             .main-child>div img {
                 width: 280px;
@@ -186,6 +188,35 @@
         #bgImg {
             transition: background-image 0.5s ease-in-out;
         }
+
+
+      
+@media (max-width: 480px) {
+
+    .main-child img {
+            max-width: fit-content;
+
+        }
+    .main-child>div img {
+        width: 280px;
+        height: 280px;
+    }
+
+    #img, .n {
+        width: 280px;
+        height: 280px;
+    }
+
+    h2, h3 {
+        font-size: 32px;
+    }
+
+    .j, .k {
+        width: 50px;
+        height: 90px;
+    }
+}
+
 
         
     </style>
