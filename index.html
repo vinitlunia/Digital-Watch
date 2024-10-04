@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(./image/white.jpg);
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        .main {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        .main-child {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-child>div img {
+            width: 280px;
+            height: 280px;
+            border-radius: 40px;
+            position: absolute;
+            left: 120px;
+            top: 390px;
+            object-fit: cover;
+
+        }
+
+        .main-child img {
+            max-width: 100%;
+            /* height: auto; */
+
+        }
+
+        #img {
+            width: 285px;
+            height: 290px;
+
+            position: absolute;
+            /* top: 150px; */
+            right: 140px;
+            /* border: 10px solid black; */
+            border-radius: 40px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+        }
+
+        .n {
+            width: 280px;
+            height: 280px;
+            background-size: cover;
+            position: absolute;
+            border-radius: 40px;
+            right: 135px;
+            color: rgb(251, 248, 248);
+            text-align: center;
+            font-size: 25px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h2 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .jk {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 75px;
+        }
+
+        .j {
+            width: 40px;
+            height: 100px;
+            background-image: url(./image/cutmypic.png);
+            background-repeat: no-repeat;
+            background-size: 40px;
+        }
+
+        .k {
+            width: 40px;
+            height: 70px;
+            background-image: url(./image/cutmypic\ \(1\).png);
+            background-repeat: no-repeat;
+            background-size: 30px;
+        }
+
+        /* Large screen (desktops) */
+        @media (min-width: 1200px) {
+            .main-child>div img {
+                width: 280px;
+                height: 275px;
+                left: 120px;
+                top: 145px;
+            }
+
+            #img {
+                width: 280px;
+                height: 275px;
+                /* right: 170px; */
+                top: 145px;
+            }
+
+            h2,
+            h3 {
+                font-size: 50px;
+            }
+        }
+
+        /* Medium screen (tablets) */
+        @media (max-width: 1199px) and (min-width: 790px) {
+            .main-child>div img {
+                width: 280px;
+                height: 280px;
+                left: 120px;
+                top: 340px;
+            }
+
+            #img {
+                width: 280px;
+                height: 280px;
+                right: 140px;
+            }
+
+            h2,
+            h3 {
+                font-size: 40px;
+            }
+
+            .n {
+                width: 280px;
+                height: 280px;
+                right: 140px;
+            }
+        }
+
+        /* Small screen (phones) */
+        @media (max-width: 789px) {
+            .main-child>div img {
+                width: 280px;
+                height: 280px;
+                left: 120px;
+                top: 340px;
+            }
+
+            h2,
+            h3 {
+                font-size: 35px;
+            }
+        }
+
+
+        #bgImg {
+            transition: background-image 0.5s ease-in-out;
+        }
+
+        
+    </style>
+</head>
+
+<body onclick="changeImg()" id="bgImg">
+    <div class="main">
+        <div class="main-child">
+            <img src="./image/watch-removebg-preview.png" alt="Watch Image">
+            <div><img src="./image/beauty-human-eye-women-looking-generative-ai.jpg" alt=""></div>
+        </div>
+
+        <div id="img"></div>
+
+        <div class="n">
+            <h1 id="week"></h1>
+            <h2 id="Time"></h2>
+            <h3 id="date"></h3>
+        </div>
+        <div class="jk">
+            <div onclick="press()" class="j"></div>
+            <div onclick="day(),date()" class="k"></div>
+        </div>
+    </div>
+
+    <script src="watch.js"></script>
+</body>
+
+</html>
